@@ -26,16 +26,6 @@ class KMeans:
         return data[random_index]
     @staticmethod
     def min_dis(point,centers):
-        # num_of_data = data.shape[0]
-        # k = len(center)
-        # closest_center_dis = np.zeros((k, 1))
-        # for i in range(k):
-        #     distance = np.zeros((k, 1))
-        #     for j in range(k):
-        #         distance_diff = data[i,:] - center[j,:]
-        #         distance[j] = np.sum(distance_diff ** 2)
-        #     closest_center_dis[i] = np.argmin(distance)
-        # return closest_center_dis
         return np.argmin(np.linalg.norm(centers-point,axis=1))
     @staticmethod
     def center_compute(data,labels,k):
